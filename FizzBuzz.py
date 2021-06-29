@@ -1,9 +1,12 @@
-for x in range(1,100):
-    options = [[3,"Fizz"],[5,"Buzz"],[6,"Boop"]]#Array storing what multiples go with each word
-    output=""
-    for y in options:
-        if (x % y[0]) == 0:
-            output += y[1]#if the nuber is a multiple of the option add the linked word to the output
-    if output == "":
-        output += str(x)
-    print(output)
+def fizz_buzz(max_val, opt):
+    for x in range(1, max_val):
+        output = ""
+        for y in opt:
+            if (x % y[0]) == 0:
+                output += y[1]#add to output if multiple of the option 
+        if output == "":
+            output += str(x)#if no match add number to the output
+        print(output)
+
+options = [[3,"Fizz"],[5,"Buzz"],[6,"Boop"]]#Array storing what multiples go with each word
+fizz_buzz(100, options)
